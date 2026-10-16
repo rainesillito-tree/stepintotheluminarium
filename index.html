@@ -838,16 +838,16 @@
     var door = makeDoor("front", "", "open visited", true);
     var node = h("section", {"class":"center"},
       h("div", {style:"width:min(52%,210px);margin:36px auto 22px"}, door),
-      h("h2", {}, "thank you for walking through."),
-      h("p", {"class":"lede"}, "whatever you said, or didn't, i'm going to read it slowly. what you tell me will shape what goes into these rooms next, so you've already helped build them a little."),
-      h("p", {"class":"lede"}, "and if you only passed through quietly: you were still here, and that has always been enough."),
+      h("h2", {}, "thank you for supporting my work."),
+      h("p", {"class":"lede"}, "thank you for taking the time to walk through this with me today. whatever you shared will shape what comes next."),
       h("div", {style:"position:relative;display:inline-block;margin:6px 0"},
         h("img", {"class":"tape", src:DECO["tape-grid"], alt:"", style:"width:92px;left:-30px;top:-10px;transform:rotate(-10deg)"}),
-        h("div", {"class":"poem"}, "the ordinary was already lit.", h("br"), "you only had to lean toward it.", h("br"), "thank you for leaning", h("br"), "toward this small house.")),
+        h("div", {"class":"poem"}, "there are tiny beautiful things", h("br"), "in the middle of long days", h("br"), "and dark nights,", h("br"), "tiny stellaria blossoms", h("br"), "opening like miniature", h("br"), "stars in the almost", h("br"), "green grass.", h("br"), "dandelions turning up", h("br"), "to the sun, little", h("br"), "explosions of yellow", h("br"), "lighting up corners and", h("br"), "deep ditches and", h("br"), "if i hold on to the", h("br"), "tiny beautiful things", h("br"), "i can imagine that", h("br"), "one day", h("br"), "everything", h("br"), "will", h("br"), "be", h("br"), "ok.")),
       h("p", {"class":"quiet"}, "raine"),
       h("div", {"style":"display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:18px"},
         h("a", {"class":"linkbtn", href:CFG.SUBSTACK_URL}, "back to the luminarium ↗"),
         h("button", {type:"button", "class":"back", onclick:function(){ viewHall(); }}, "wander again")),
+      /[?&]test=1/.test(location.search) ? h("p", {"class":"note-preview"}, CFG.ENDPOINT ? "test: this page is set to send answers to your sheet." : "test: no sheet connected; this is the preview version.") : null,
       preview ? h("p", {"class":"note-preview"}, "preview mode: no endpoint is set, so nothing was sent. answers were logged to the browser console.") : null);
     show(node);
   }
